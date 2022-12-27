@@ -1,0 +1,64 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.post {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+
+	@include device(tablet) {
+		flex-direction: column;
+		max-width: 50rem;
+	}
+
+	&:not(:last-of-type) {
+		margin-bottom: 4rem;
+
+		@include device(tablet) {
+			margin-bottom: 6rem;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	.image {
+		img {
+			max-width: 20rem;
+			height: 20rem;
+
+			@include device(tablet) {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.content {
+		h2 {
+			font-family: $titleFontFamily;
+			font-weight: 400;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		a {
+			text-decoration: none;
+			color: $black;
+
+			&:hover {
+				font-weight: 600;
+			}
+		}
+	}
+}

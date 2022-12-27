@@ -1,0 +1,14 @@
+@import "styles/mixins";
+
+.section {
+	@include max-width(small);
+	@include flex-center;
+	flex-direction: column;
+	margin: 20rem auto;
+
+	h1 {
+		font-size: 7rem;
+		margin-bottom: 4rem;
+		line-height: 1;
+	}
+}
